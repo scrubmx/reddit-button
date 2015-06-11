@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>The Button – Weekly</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+
+					<h1 class="page-header">The Button – Weekly</h1>
+					<canvas id="chart" width="900" height="500"></canvas>
+
+					<h2 class="page-header">Button Presses By Color</h2>
+					<div class="row">
+						<div class="col-md-6"><canvas id="purple" width="400" height="250"></canvas></div>
+						<div class="col-md-6"><canvas id="blue" width="400" height="250"></canvas></div>
+						<div class="col-md-6"><canvas id="green" width="400" height="250"></canvas></div>
+						<div class="col-md-6"><canvas id="yellow" width="400" height="250"></canvas></div>
+						<div class="col-md-6"><canvas id="orange" width="400" height="250"></canvas></div>
+						<div class="col-md-6"><canvas id="red" width="400" height="250"></canvas></div>
+					</div>
+
+					<nav>
+						<ul class="pager">
+							<li><a href="/monthly.html">monthly</a></li>
+							<li><a href="/weekly.html">weekly</a></li>
+							<li><a href="/daily.html">daily</a></li>
+							<li><a href="/hourly.html">hourly</a></li>
+						</ul>
+					</nav>
+
+				</div><!-- col-sm-10 -->
+			</div><!-- row -->
+		</div><!-- container -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="js/vendor/jquery-csv.min.js"></script>
+		<script src="js/vendor/chart.min.js"></script>
+		<script src="js/weekly.js"></script>
+	</body>
+</html>
