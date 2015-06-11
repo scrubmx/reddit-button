@@ -6,7 +6,14 @@
 
         function getChartLabels() {
             var labels = [];
-            for (var i=0; i<66; i++) { labels[i] = '' }
+            for (var i=0; i<66; i++) {
+                switch(i){
+                    case 0: labels[i] = 'April'; break;
+                    case 31: labels[i] = 'May'; break;
+                    case 63: labels[i] = 'June'; break;
+                    default: labels[i] = ''; break;
+                }
+            }
 
             return labels;
         }
@@ -20,14 +27,26 @@
             );
         }
 
+        function hexToRgb(hex, alpha) {
+            alpha = typeof alpha !== 'undefined' ? alpha : 1;
+
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+
+            return 'rgba('+
+                    parseInt(result[1], 16) + ',' +
+                    parseInt(result[2], 16) + ',' +
+                    parseInt(result[3], 16) + ',' +
+                    alpha + ')';
+        }
+
         function createDataset(data, color) {
             return {
-                fillColor: 'rgba('+color+',0.2)',
-                strokeColor: 'rgba('+color+',1)',
-                pointColor: 'rgba('+color+',1)',
+                fillColor: hexToRgb(color, 0.2),
+                strokeColor: color,
+                pointColor: color,
                 pointStrokeColor: '#fff',
                 pointHighlightFill: '#fff',
-                pointHighlightStroke: 'rgba('+color+',1)',
+                pointHighlightStroke: color,
                 data: data
             }
         }
@@ -42,8 +61,7 @@
             var orange = [];
             var red    = [];
 
-            // Remove the headers
-            data.splice(0, 1);
+            data.splice(0, 1); // Remove the headers
 
             $.map(data, function(row){
                 purple.push(+row[1]);
@@ -54,12 +72,12 @@
                 red.push(+row[6]);
             });
 
-            var purpleData = createDataset(purple, '204,153,204');
-            var blueData   = createDataset(blue, '102,153,204');
-            var greenData  = createDataset(green, '153,204,153');
-            var yellowData = createDataset(yellow, '255,204,102');
-            var orangeData = createDataset(orange, '249,145,87');
-            var redData    = createDataset(red, '242,119,122');
+            var purpleData = createDataset(purple, '#CC99CC');
+            var blueData   = createDataset(blue, '#6699CC');
+            var greenData  = createDataset(green, '#99CC99');
+            var yellowData = createDataset(yellow, '#FFCC66');
+            var orangeData = createDataset(orange, '#F99157');
+            var redData    = createDataset(red, '#F2777A');
 
             drawLineChart('#chart', [ blueData, greenData, yellowData, orangeData, redData ]);
             drawLineChart('#purple', [ purpleData ]);
