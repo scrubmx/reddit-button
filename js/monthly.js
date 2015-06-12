@@ -79,7 +79,7 @@
             var orangeData = createDataset(orange, '#F99157');
             var redData    = createDataset(red, '#F2777A');
 
-            drawLineChart('#chart', [ purpleData, blueData, greenData, yellowData, orangeData, redData ]);
+            drawLineChart('#chart', [ blueData, greenData, yellowData, orangeData, redData ]);
             drawLineChart('#purple', [ purpleData ]);
             drawLineChart('#blue', [ blueData ]);
             drawLineChart('#green', [ greenData ]);

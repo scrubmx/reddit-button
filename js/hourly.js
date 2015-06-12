@@ -8,10 +8,10 @@
             var labels = [];
             for (var i=0; i<1566; i++) {
                 switch(i){
-                    case 0  : labels[i] = 'April'; break;
-                    case 750 : labels[i] = 'May';   break;
-                    case 1550 : labels[i] = 'June';  break;
-                    default : labels[i] = '';      break;
+                    case 0    : labels[i] = 'April'; break;
+                    case 733  : labels[i] = 'May';   break;
+                    case 1466 : labels[i] = 'June';  break;
+                    default   : labels[i] = '';      break;
                 }
             }
 
@@ -23,7 +23,14 @@
 
             new Chart(context).Line(
                 { labels: getChartLabels(), datasets: data },
-                { bezierCurve: false, responsive: true,  showTooltips: false, }
+                {
+                    bezierCurve: false,
+                    responsive: true,
+                    showTooltips: false,
+                    pointDot: false,
+                    animation: false,
+                    scaleShowVerticalLines: false
+                }
             );
         }
 
@@ -41,7 +48,7 @@
 
         function createDataset(data, color) {
             return {
-                fillColor: hexToRgb(color, 0.2),
+                fillColor: hexToRgb(color, 0.0),
                 strokeColor: color,
                 pointColor: color,
                 pointStrokeColor: '#fff',
