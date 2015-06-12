@@ -11,10 +11,6 @@
 
 Users are now divided as "Button clickers" and "Non-Clickers"
 
-<p align="center">
-  <img src="https://github.com/scrubmx/reddit-button/blob/master/img/press-the-button.gif?raw=true" alt="Press the Button"/>
-</p>
-
 ## Visualization
 
 ###### Hourly Clicks by Flair
