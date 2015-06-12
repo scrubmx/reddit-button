@@ -17,4 +17,13 @@ Users are now divided as "Button clickers" and "Non-Clickers"
 
 ## Visualization
 
-TODO: add screenshots of the charts.
+###### Hourly Clicks by Flair
+
+<p align="center">
+  <img src="https://github.com/scrubmx/reddit-button/blob/master/img/graphs/hourly-purple.png?raw=true" alt="hourly-purple"/>
+  <img src="https://github.com/scrubmx/reddit-button/blob/master/img/graphs/hourly-blue.png?raw=true" alt="hourly-blue"/>
+  <img src="https://github.com/scrubmx/reddit-button/blob/master/img/graphs/hourly-green.png?raw=true" alt="hourly-green"/>
+  <img src="https://github.com/scrubmx/reddit-button/blob/master/img/graphs/hourly-yellow.png?raw=true" alt="hourly-yellow"/>
+  <img src="https://github.com/scrubmx/reddit-button/blob/master/img/graphs/hourly-orange.png?raw=true" alt="hourly-orange"/>
+  <img src="https://github.com/scrubmx/reddit-button/blob/master/img/graphs/hourly-red.png?raw=true" alt="hourly-red"/>
+</p>
